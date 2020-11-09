@@ -6,26 +6,29 @@ class Child extends Component {
     console.log("Childconstructor");
   }
 
-  UNSAFE_componentWillMount() {
-    console.log("Child-componentwillmount");
-  }
+  // UNSAFE_componentWillMount() {
+  //   console.log("Child-componentwillmount");
+  // }
 
   componentDidMount() {
     console.log("Child-componentdidmount");
   }
 
-  UNSAFE_componentWillReceiveProps() {
-    console.log("Child-componentWillrecieveprops");
-  }
+  // UNSAFE_componentWillReceiveProps() {
+  //   console.log("Child-componentWillrecieveprops");
+  // }
+
+  //instead of the above lifecycle event the below lifecycle event is used.
+  getSnapshotBeforeUpdate() {}
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log("child - ShouldComponentUpdate");
     return true;
   }
 
-  UNSAFE_componentWillUpdate() {
-    console.log("Child - ComponentWillUpdate");
-  }
+  // UNSAFE_componentWillUpdate() {
+  //   console.log("Child - ComponentWillUpdate");
+  // }
 
   componentDidUpdate(prevProps, prevState) {
     console.log("child prevprops - " + prevProps);
